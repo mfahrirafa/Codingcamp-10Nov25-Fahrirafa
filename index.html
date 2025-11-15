@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi To-Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Daftar Tugas</h1>
+        
+        <!-- Form Input -->
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Tambah tugas...">
+            <input type="date" id="date-input">
+            <button type="submit">Tambah</button>
+        </form>
+        
+        <!-- Tombol Filter -->
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">Semua</button>
+            <button class="filter-btn" data-filter="active">Aktif</button>
+            <button class="filter-btn" data-filter="completed">Selesai</button>
+            <button id="delete-all-btn">Hapus Semua</button>
+        </div>
+        
+        <!-- Daftar Todo -->
+        <div id="todo-list-container">
+            <table id="todo-table">
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Tanggal</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="todo-list">
+                    <!-- Task akan muncul di sini -->
+                </tbody>
+            </table>
+            <p id="no-task-message" class="hidden">Tidak ada tugas ditemukan</p>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
